@@ -1,4 +1,10 @@
+# Folders
 .idea
 .mvn
+.settings
 .vscode
-/target
+target
+
+# Files
+.classpath
+.project
