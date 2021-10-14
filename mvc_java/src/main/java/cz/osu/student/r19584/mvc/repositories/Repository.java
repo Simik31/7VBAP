@@ -20,6 +20,8 @@ public class Repository {
         leagues.add(new League("NHL"));
         leagues.get(1).addClub(new Club("Capitals", "Washington "));
         leagues.get(1).addClub(new Club("Penguin", "Pittsburgh "));
+
+        leagues.add(new League("KHL"));
     }
 
     public List<League> getAllLeagues() {
@@ -27,17 +29,14 @@ public class Repository {
     }
 
     public League getLeagueById(int leagueId) {
-        return leagues.stream()
-                .filter(league -> league.getId() == leagueId)
-                .findFirst()
-                .get();
+        return leagues.stream().filter(league -> league.getId() == leagueId).findFirst().get();
+    }
+
+    public void addLeague(League league) {
+        leagues.add(league);
     }
 
     public void addClubToLeague(int leagueId, Club club) {
-        leagues.stream()
-                .filter(league -> league.getId() == leagueId)
-                .findFirst()
-                .get()
-                .addClub(club);
+        leagues.stream().filter(league -> league.getId() == leagueId).findFirst().get().addClub(club);
     }
 }

@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3 th:text="${league.getTitle()}"></h3>
-<table>
+<table th:if="${league.getClubs().size() > 0}">
     <thead>
     <tr>
         <th>Název klubu</th>
