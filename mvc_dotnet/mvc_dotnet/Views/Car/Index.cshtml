@@ -1,0 +1,10 @@
+﻿@model List<Car>
+
+<h1>Moje auta</h1>
+@foreach (Car car in Model)
+{
+    <div>
+        <h2>@car.Brand</h2>
+        Vyrobeno v @car.YearOfManufacture
+    </div>
+}
