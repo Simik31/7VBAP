@@ -4,6 +4,9 @@ public class Club {
     private String title;
     private String city;
 
+    public Club() {
+    }
+
     public Club(String title, String city) {
         this.title = title;
         this.city = city;
