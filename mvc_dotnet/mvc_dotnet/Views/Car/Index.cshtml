@@ -1,6 +1,7 @@
 ﻿@model List<Car>
 
 <h1>Moje auta</h1>
+
 @foreach (Car car in Model)
 {
     <div>
@@ -8,3 +9,5 @@
         Vyrobeno v @car.YearOfManufacture
     </div>
 }
+
+@Html.ActionLink("Přidat nové auto", "register", "Car")

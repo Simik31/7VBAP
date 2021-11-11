@@ -20,6 +20,11 @@ namespace mvc_dotnet.Services
             });
         }
 
+        public void AddCar(Car car)
+        {
+            cars.Add(car);
+        }
+
         public List<Car> GetCars()
         {
             return cars.ToList();

@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<CarRepository>(_ => new CarRepository());
+builder.Services.AddSingleton<CarRepository>(_ => new CarRepository());
 
 var app = builder.Build();
 

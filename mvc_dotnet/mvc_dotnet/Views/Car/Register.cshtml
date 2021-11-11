@@ -1,0 +1,16 @@
+﻿@model Car
+
+<h1>Nové auto</h1>
+
+@using(Html.BeginForm(FormMethod.Post))
+{
+    <div>
+        <label>Značka: </label>
+        @Html.TextBoxFor(model => model.Brand)
+    </div>
+    <div>
+        <label>Rok výroby: </label>
+        @Html.TextBoxFor(model => model.YearOfManufacture, new {type = "number", min = "1900", max = "2100"})
+    </div>
+    <input type="submit" value="Odeslat" />
+}
